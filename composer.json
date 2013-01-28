@@ -16,9 +16,7 @@
 	},
 
 	"autoload" : {
-		"files" : ["adodb.inc.php"],
-		"files" : ["adodb-exceptions.inc.php"],
-		"files" : ["session/adodb-session2.php"]
+		"files" : ["adodb.inc.php", "adodb-exceptions.inc.php", "session/adodb-session2.php"]
 	}
 
 }
