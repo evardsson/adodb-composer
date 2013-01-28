@@ -16,8 +16,7 @@
 	},
 
 	"autoload" : {
-		"files" : ["adodb.inc.php"],
-		"files" : ["session/adodb-session.php"]
+		"files" : ["adodb.inc.php", "session/adodb-session.php"]
 	}
 
 }
