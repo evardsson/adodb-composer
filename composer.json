@@ -16,7 +16,7 @@
 	},
 
 	"autoload" : {
-		"files" : ["adodb.inc.php", "session/adodb-session2.php", "session/adodb-cryptsession2.php"]
+		"files" : ["adodb.inc.php", "session/adodb-session2.php"]
 	}
 
 }
