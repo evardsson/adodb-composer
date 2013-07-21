@@ -1057,7 +1057,7 @@
 	{
 		if ($this->debug) {
 			global $ADODB_INCLUDED_LIB;
-			if (empty($ADODB_INCLUDED_LIB)) include(ADODB_DIR.'/adodb-lib.inc.php');
+			if (empty($ADODB_INCLUDED_LIB)) include_once(ADODB_DIR.'/adodb-lib.inc.php');
 			$this->_queryID = _adodb_debug_execute($this, $sql,$inputarr);
 		} else {
 			$this->_queryID = @$this->_query($sql,$inputarr);
@@ -1691,7 +1691,7 @@
 	function Replace($table, $fieldArray, $keyCol, $autoQuote=false, $has_autoinc=false)
 	{
 		global $ADODB_INCLUDED_LIB;
-		if (empty($ADODB_INCLUDED_LIB)) include(ADODB_DIR.'/adodb-lib.inc.php');
+		if (empty($ADODB_INCLUDED_LIB)) include_once(ADODB_DIR.'/adodb-lib.inc.php');
 		
 		return _adodb_replace($this, $table, $fieldArray, $keyCol, $autoQuote, $has_autoinc);
 	}
@@ -1961,7 +1961,7 @@
 		}
 		//********************************************************//
 
-		if (empty($ADODB_INCLUDED_LIB)) include(ADODB_DIR.'/adodb-lib.inc.php');
+		if (empty($ADODB_INCLUDED_LIB)) include_once(ADODB_DIR.'/adodb-lib.inc.php');
 		return _adodb_getupdatesql($this,$rs,$arrFields,$forceUpdate,$magicq,$force);
 	}
 
@@ -1981,7 +1981,7 @@
 			$force = $ADODB_FORCE_TYPE;
 			
 		}
-		if (empty($ADODB_INCLUDED_LIB)) include(ADODB_DIR.'/adodb-lib.inc.php');
+		if (empty($ADODB_INCLUDED_LIB)) include_once(ADODB_DIR.'/adodb-lib.inc.php');
 		return _adodb_getinsertsql($this,$rs,$arrFields,$magicq,$force);
 	}
 	
@@ -2738,7 +2738,7 @@ http://www.stanford.edu/dept/itss/docs/oracle/10g/server.101/b10759/statements_1
 	function PageExecute($sql, $nrows, $page, $inputarr=false, $secs2cache=0) 
 	{
 		global $ADODB_INCLUDED_LIB;
-		if (empty($ADODB_INCLUDED_LIB)) include(ADODB_DIR.'/adodb-lib.inc.php');
+		if (empty($ADODB_INCLUDED_LIB)) include_once(ADODB_DIR.'/adodb-lib.inc.php');
 		if ($this->pageExecuteCountRows) $rs = _adodb_pageexecute_all_rows($this, $sql, $nrows, $page, $inputarr, $secs2cache);
 		else $rs = _adodb_pageexecute_no_last_page($this, $sql, $nrows, $page, $inputarr, $secs2cache);
 		return $rs;
@@ -3024,7 +3024,7 @@ http://www.stanford.edu/dept/itss/docs/oracle/10g/server.101/b10759/statements_1
 			$size=0, $selectAttr='',$compareFields0=true)
 	{
 		global $ADODB_INCLUDED_LIB;
-		if (empty($ADODB_INCLUDED_LIB)) include(ADODB_DIR.'/adodb-lib.inc.php');
+		if (empty($ADODB_INCLUDED_LIB)) include_once(ADODB_DIR.'/adodb-lib.inc.php');
 		return _adodb_getmenu($this, $name,$defstr,$blank1stItem,$multiple,
 			$size, $selectAttr,$compareFields0);
 	}
@@ -3051,7 +3051,7 @@ http://www.stanford.edu/dept/itss/docs/oracle/10g/server.101/b10759/statements_1
 			$size=0, $selectAttr='')
 	{
 		global $ADODB_INCLUDED_LIB;
-		if (empty($ADODB_INCLUDED_LIB)) include(ADODB_DIR.'/adodb-lib.inc.php');
+		if (empty($ADODB_INCLUDED_LIB)) include_once(ADODB_DIR.'/adodb-lib.inc.php');
 		return _adodb_getmenu_gp($this, $name,$defstr,$blank1stItem,$multiple,
 			$size, $selectAttr,false);
 	}
@@ -3966,7 +3966,7 @@ http://www.stanford.edu/dept/itss/docs/oracle/10g/server.101/b10759/statements_1
 		{
 		global $ADODB_INCLUDED_LIB;
 			
-			if (empty($ADODB_INCLUDED_LIB)) include(ADODB_DIR.'/adodb-lib.inc.php');
+			if (empty($ADODB_INCLUDED_LIB)) include_once(ADODB_DIR.'/adodb-lib.inc.php');
 			$hdr = true;
 			
 			$fobjs = $addfieldnames ? $this->_fieldobjects : false;
@@ -4472,7 +4472,7 @@ http://www.stanford.edu/dept/itss/docs/oracle/10g/server.101/b10759/statements_1
 	function adodb_backtrace($printOrArr=true,$levels=9999,$ishtml=null)
 	{
 		global $ADODB_INCLUDED_LIB;
-		if (empty($ADODB_INCLUDED_LIB)) include(ADODB_DIR.'/adodb-lib.inc.php');
+		if (empty($ADODB_INCLUDED_LIB)) include_once(ADODB_DIR.'/adodb-lib.inc.php');
 		return _adodb_backtrace($printOrArr,$levels,0,$ishtml);
 	}
 
