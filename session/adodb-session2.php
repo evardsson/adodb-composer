@@ -581,6 +581,8 @@ class ADODB_Session {
 			} else {
 				$ok = $conn->Connect($host, $user, $password, $database);
 			}
+		} else {
+			$ok = true;
 		}
 
 		if ($ok) $GLOBALS['ADODB_SESS_CONN'] = $conn;
